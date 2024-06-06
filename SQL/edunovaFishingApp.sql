@@ -69,7 +69,7 @@ select * from fish;
 select * from river;
 select * from fishing;
 
-select fi.id, FORMAT(fi.date, 'dd.MM.yyyy.') as Datum, CONCAT(u.first_name,' ', u.last_name) as "User",f.name as Fish, r.name as River,fi.quantity as Quantity, fi.weight as Weight from fishing fi
+select fi.id, FORMAT(fi.date, 'dd.MM.yyyy.') as Date, CONCAT(u.first_name,' ', u.last_name) as "User",f.name as Fish, r.name as River,fi.quantity as Quantity, fi.weight as Weight from fishing fi
 inner join fish f on fi.fish = f.id
 inner join "user" u on fi."user" = u.id
 inner join river r on fi.river = r.id;
